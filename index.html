@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API Project</title>
+	<link rel="stylesheet" href="style/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<header>
+		<h1 id="page-title">New You</h1>
+		<button onClick="window.location.reload()">Try again</button>
+	</header>
+
+	<main>
+		<div class="container">
+
+			<section class="messedUp">
+				<h2>You messed up.</h2>
+				<h3 id="newIden">Now you need a new identity. Well...</h3>
+				<h3 class="adviceEl adviceHidden">Here's some advice to help you for next time:<br> </h3>
+			</section>
+
+			<form action="" class="inputForm">
+
+				<div class="questions clearfix">
+
+					<div class="genderQ">
+						<h3>What gender are you?</h3>
+						<label for="male">Male</label>
+						<input type="radio" name="gender" id="male" required>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="female">
+					</div>
+
+					<div class="age">
+						<h3>How old do you look?</h3>
+						<input type="number" pattern="[0-9]{2}" title="Please enter an age between 18-99" name="age" id="age" required min="0">
+					</div>
+
+					<div class="regionQ">
+						<h3 for="region">Choose your new home:</h3>
+						<select name="region" id="region">
+							<option value="canada">Canada</option>
+							<option value="china">China</option>
+							<option value="germany">Germany</option>
+							<option value="morocco">Morocco</option>
+							<option value="russia">Russia</option>
+							<option value="random">Who cares?</option>
+						</select>
+					</div><!-- /.regionQ -->
+
+				</div><!-- /.questions -->
+				
+				<div class="options">
+					<h3>Additional options</h3>
+
+					<div>
+						<label for="online">Will you be performing fraudulent online activity?</label>
+						<input type="checkbox" value="Check yes or no." id="online" name="online">
+					</div>
+
+					<div>
+						<label for="ccard">Would you like a complementary stolen credit card?</label>
+						<input type="checkbox" value="Check yes or no." id="ccard" name="ccard">
+					</div>
+
+					<div>
+						<label for="sin">Do you need a new SIN?</label>
+						<input type="checkbox" value="Check yes or no." id="sin" name="sin">
+					</div>
+					
+				</div><!-- /.options -->
+
+				<button type="submit">Gimme a new me!</button>
+
+			</form><!-- /.inputForm -->
+
+			<section class="newYou secHidden">
+
+				<div class="youInfo">
+					<h3>New You Info</h3>
+					<p class="title name surname">Name: </p>
+					<p class="gender">Sex: </p>
+					<p class="region">Country: </p>
+					<p class="age">Date of Birth: </p>
+				</div>
+
+				<h3>Alias for online activity</h3>
+
+				<div class="alias aliasHidden clearfix">
+					<div class="aliasImgOuter">
+						<div class="aliasImg">
+							<span class="aliasImgInner">
+							</span>
+						</div>
+					</div>
+					<div class="aliasInfo">
+						<p class="aliasName">New Online Alias: </p>
+						<p class="aliasEmail">Email:  </p>
+					</div>
+				</div>
+
+				<div class="ccard ccardHidden">
+					<h3>Credit Card Info</h3>
+					<p class="cCardNum">Card Number: </p>
+					<p class="cCardExp">Card Expiry: </p>
+					<p class="cCardPin">Card Pin: </p>
+					<p class="cCardSec">Card Security Number: </p>
+				</div>
+
+				<div class="sin sinHidden">
+					<h3>SIN Number</h3>
+					<p></p>
+				</div>
+
+				<button onClick="window.location.reload()">Not me, try again!</button>
+
+			</section>
+		</div><!-- /.container -->
+
+		<footer>
+			<a href="http://www.kurtwilliam.com/">partner in crime</a>
+		</footer>
+		
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="script/script.js"></script>
+
+</body>
+</html>
