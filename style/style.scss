@@ -135,21 +135,37 @@ header{
 	justify-content: space-around;
 	flex-wrap: wrap;
 	div {
+		position:relative;
 		display:flex;
-		justify-content: space-between;
-		width:75%;
+		justify-content: center;
+		align-items: center;
+		width:100%;
 		margin:5px;
 		input{
+			position: absolute;
+			top:50%;
+			transform:translate(0,-50%);
+			right:100px;
 			width:15px;
 			height:15px;
-			margin:5px;
+			// margin:5px;
+			@media (max-width:900px){
+				right:20px;
+			}
+			@media (max-width:900px){
+				right:0px;
+			}
+
+		}
+		label{
+			@media (max-width:900px){
+				margin-right:50px;
+			}
+			@media (max-width:900px){
+				margin-right:20px;
+			}
 		}
 	}
-}
-
-#online, #ccard{
-	width:15px;
-	height:15px;
 }
 
 .newYou{

@@ -248,22 +248,39 @@ header {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .options div {
+    position: relative;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 75%;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
     margin: 5px; }
     .options div input {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      right: 100px;
       width: 15px;
-      height: 15px;
-      margin: 5px; }
-
-#online, #ccard {
-  width: 15px;
-  height: 15px; }
+      height: 15px; }
+      @media (max-width: 900px) {
+        .options div input {
+          right: 20px; } }
+      @media (max-width: 900px) {
+        .options div input {
+          right: 0px; } }
+    @media (max-width: 900px) {
+      .options div label {
+        margin-right: 50px; } }
+    @media (max-width: 900px) {
+      .options div label {
+        margin-right: 20px; } }
 
 .newYou {
   margin: 0 auto;
