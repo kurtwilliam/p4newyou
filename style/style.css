@@ -139,7 +139,17 @@ html {
   box-sizing: border-box; }
 
 body {
-  background: repeating-linear-gradient(45deg, #305d7e, #305d7e 10px, indianred 10px, indianred 20px); }
+  background: repeating-linear-gradient(45deg, #305d7e, #305d7e 10px, indianred 10px, indianred 20px);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 100vh; }
 
 h1 {
   font-size: 5rem;
